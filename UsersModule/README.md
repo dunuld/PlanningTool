@@ -2,7 +2,7 @@
 //  Run React on port 4200  
 cd UsersModule/src/main/ui  
 npm install  
-export NODE_OPTIONS=--openssl-legacy-provider
+export NODE_OPTIONS=--openssl-legacy-provider  
 npm start  
 
 
