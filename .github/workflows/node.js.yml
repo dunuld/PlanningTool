@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.20.1]
+        node-version: [16.1.0]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -26,10 +26,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        cache-dependency-path: './UsersModule/src/main/ui/package-lock.json'
+        cache-dependency-path: './PlanningToolFrontend/package-lock.json'
     - run: npm ci
-      working-directory: UsersModule/src/main/ui
+      working-directory: PlanningToolFrontend
     - run: npm run build --if-present
-      working-directory: UsersModule/src/main/ui
+      working-directory: PlanningToolFrontend
     - run: npm test
-      working-directory: UsersModule/src/main/ui
+      working-directory: PlanningToolFrontend
