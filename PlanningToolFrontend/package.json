@@ -1,5 +1,5 @@
 {
-  "name": "users-module-frontend",
+  "name": "planning-tool-frontend",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
