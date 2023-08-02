@@ -21,6 +21,16 @@
             required #email="ngModel">
           <div [hidden]="!email.pristine" class="alert alert-danger">Email is required</div>
         </div>
+        <div class="form-group">
+          <label for="capacity">Capacity</label>
+          <input type="text" [(ngModel)]="person.capacity" 
+            class="form-control" 
+            id="capacity" 
+            name="capacity" 
+            placeholder="Enter your capacity"
+            required #name="ngModel">
+        </div>
+        <div [hidden]="!name.pristine" class="alert alert-danger">Capacity is required</div>
         <button type="submit" [disabled]="!personForm.form.valid" 
           class="btn btn-info">Submit</button>
       </form>
