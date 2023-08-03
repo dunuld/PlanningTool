@@ -4,7 +4,7 @@ import { PersonService } from '../service/person.service';
 import { Person } from '../model/person';
 
 @Component({
-  selector: 'app-user-form',
+  selector: 'app-person-form',
   templateUrl: './person-form.component.html',
   styleUrls: ['./person-form.component.css']
 })

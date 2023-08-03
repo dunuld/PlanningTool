@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title = 'PlanningTool';
 
-  title: string;
-
-  constructor() {
-    this.title = 'Spring Boot - Angular Application';
+  changeTitle(newTitle: string) {
+    this.title = newTitle;
   }
 }
