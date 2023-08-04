@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 import { PersonListComponent } from './person-list/person-list.component';
 import { PersonFormComponent } from './person-form/person-form.component';
 import { PersonService } from './service/person.service';
@@ -15,10 +16,11 @@ import { PersonService } from './service/person.service';
     PersonFormComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    BrowserModule,
+    FormsModule,
+    CommonModule,
+    AppRoutingModule,
   ],
   providers: [PersonService],
   bootstrap: [AppComponent]

@@ -20,7 +20,7 @@ public class PlanningToolBackendApplication {
 	CommandLineRunner init(PersonRepository personRepository) {
 		return args -> {
 			Stream.of("John", "Julie", "Jennifer", "Helen", "Rachel").forEach(name -> {
-				Person person = new Person(name, name.toLowerCase() + "@domain.com");
+				Person person = new Person(name, name.toLowerCase() + "@domain.com", 0.8);
 				personRepository.save(person);
 			});
 			personRepository.findAll().forEach(System.out::println);

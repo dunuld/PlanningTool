@@ -20,9 +20,12 @@ public class Person {
     private final String name;
     @Getter
     private final String email;
+    @Getter
+    private final double capacity;
 
-    public Person(String name, String email) {
+    public Person(String name, String email, double capacity) {
         this.name = name;
         this.email = email;
+        this.capacity = capacity;
     }
 }
