@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./PlanningToolBackend
+    ports:
+      - "8080:8080"
+    networks:
+      - planning-network
+
+  frontend:
+    build:
+      context: ./PlanningToolFrontend
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+    networks:
+      - planning-network
+
+networks:
+  planning-network:
+    driver: bridge
