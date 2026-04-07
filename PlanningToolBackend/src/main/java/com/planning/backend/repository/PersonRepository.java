@@ -1,4 +1,4 @@
-package com.planning.backend.intf;
+package com.planning.backend.repository;
 
 import com.planning.backend.entity.Person;
 import org.springframework.data.repository.CrudRepository;

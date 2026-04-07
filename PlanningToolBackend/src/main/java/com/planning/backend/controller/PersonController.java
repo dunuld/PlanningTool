@@ -1,7 +1,7 @@
 package com.planning.backend.controller;
 
 import com.planning.backend.entity.Person;
-import com.planning.backend.intf.PersonRepository;
+import com.planning.backend.repository.PersonRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

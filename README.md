@@ -1,74 +1,42 @@
 # PlanningTool
 
-## PlanningToolBackend mit Docker
+Dieses Projekt besteht aus einem Spring Boot Backend und einem Angular Frontend, die zusammen als Docker-Anwendung ausgeführt werden können.
 
-Dieses Projekt enthält ein Dockerfile für das Backend.
+## Projektstruktur
 
-### Docker Image bauen
+- `/PlanningToolBackend`: Spring Boot (Java 17) Backend mit Maven.
+- `/PlanningToolFrontend`: Angular Frontend.
+- `docker-compose.yml`: Konfiguration zum Starten beider Komponenten.
 
-Um das Docker-Image für das Backend zu erstellen, führe den folgenden Befehl im Projekt-Stammverzeichnis aus:
+## Starten mit Docker Compose
 
-```bash
-docker build -t planning-tool-backend ./PlanningToolBackend
-```
-
-### Container starten
-
-Nachdem das Image gebaut wurde, kannst du den Container mit dem folgenden Befehl starten:
-
-```bash
-docker run -p 8080:8080 planning-tool-backend
-```
-
-Das Backend ist dann unter `http://localhost:8080` erreichbar.
-
-## PlanningToolFrontend mit Docker
-
-Dieses Projekt enthält ein Dockerfile für das Frontend.
-
-### Docker Image bauen
-
-Um das Docker-Image für das Frontend zu erstellen, führe den folgenden Befehl im Projekt-Stammverzeichnis aus:
-
-```bash
-docker build -t planning-tool-frontend ./PlanningToolFrontend
-```
-
-### Container starten
-
-Nachdem das Image gebaut wurde, kannst du den Container mit dem folgenden Befehl starten:
-
-```bash
-docker run -p 4200:80 planning-tool-frontend
-```
-
-Das Frontend ist dann unter `http://localhost:4200` erreichbar.
-
-## Gemeinsames Starten mit Docker Compose
-
-Am einfachsten lassen sich beide Komponenten gemeinsam mit Docker Compose starten.
+Am einfachsten lässt sich die Anwendung mit Docker Compose starten.
 
 ### Voraussetzungen
 
 - Docker und Docker Compose müssen installiert sein.
 
-### Starten der Anwendung
+### Befehle
 
-Führe den folgenden Befehl im Projekt-Stammverzeichnis aus:
+1. **Anwendung starten:**
+   ```bash
+   docker-compose up --build
+   ```
+   - Das **Frontend** ist unter [http://localhost:4200](http://localhost:4200) erreichbar.
+   - Das **Backend** ist unter [http://localhost:8080](http://localhost:8080) erreichbar.
 
-```bash
-docker-compose up --build
-```
+2. **Anwendung stoppen:**
+   ```bash
+   docker-compose down
+   ```
 
-Dieser Befehl baut beide Images (Frontend und Backend) und startet die Container.
+## Manuelle Entwicklung
 
-- Das **Frontend** ist unter [http://localhost:4200](http://localhost:4200) erreichbar.
-- Das **Backend** ist unter [http://localhost:8080](http://localhost:8080) erreichbar.
+### Backend
+- Navigiere zu `PlanningToolBackend`
+- Ausführen mit: `./mvnw spring-boot:run`
 
-### Stoppen der Anwendung
-
-Um die Container zu stoppen, verwende:
-
-```bash
-docker-compose down
-```
+### Frontend
+- Navigiere zu `PlanningToolFrontend`
+- Abhängigkeiten installieren: `npm install`
+- Ausführen mit: `npm start`
