@@ -30,8 +30,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-      working-directory: ./PlanningTool/PlanningToolFrontend
+      working-directory: ./PlanningToolFrontend
     - run: npm run build --if-present
-      working-directory: ./PlanningTool/PlanningToolFrontend
+      working-directory: ./PlanningToolFrontend
     - run: npm test
-      working-directory: ./PlanningTool/PlanningToolFrontend
+      working-directory: ./PlanningToolFrontend
