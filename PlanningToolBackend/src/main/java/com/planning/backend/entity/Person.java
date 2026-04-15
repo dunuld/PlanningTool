@@ -5,19 +5,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @Entity
 @ToString
+@Getter
+@Setter
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Getter
     private String name;
-    @Getter
     private String email;
-    @Getter
     private double capacity;
 
     public Person() {}
