@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 public class PersonController {
 
-    private final PersonRepository personRepository;
+    private PersonRepository personRepository;
 
     @GetMapping("/users")
     public List<Person> getPersons() {

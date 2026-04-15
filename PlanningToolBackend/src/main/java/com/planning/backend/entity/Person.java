@@ -5,23 +5,22 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@NoArgsConstructor(force = true)
 @ToString
 public class Person {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Getter
-    private final String name;
+    private String name;
     @Getter
-    private final String email;
+    private String email;
     @Getter
-    private final double capacity;
+    private double capacity;
+
+    public Person() {}
 
     public Person(String name, String email, double capacity) {
         this.name = name;
