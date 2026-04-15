@@ -1,7 +1,7 @@
 package com.planning.backend;
 
 import com.planning.backend.entity.Person;
-import com.planning.backend.intf.PersonRepository;
+import com.planning.backend.repository.PersonRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
