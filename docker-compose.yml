@@ -7,6 +7,23 @@ services:
       context: ./PlanningToolBackend
     ports:
       - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/planning_db
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+    depends_on:
+      - db
+    networks:
+      - planning-network
+
+  db:
+    image: mysql:8.0
+    container_name: planning-db
+    environment:
+      - MYSQL_DATABASE=planning_db
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
     networks:
       - planning-network
 
