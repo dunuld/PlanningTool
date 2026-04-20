@@ -36,5 +36,5 @@ jobs:
       working-directory: PlanningToolFrontend
     - run: npm run build --if-present
       working-directory: PlanningToolFrontend
-    - run: npm test --browsers ChromeHeadless
+    - run: npm run test ChromeHeadless
       working-directory: PlanningToolFrontend
