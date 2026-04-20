@@ -36,5 +36,5 @@ jobs:
       working-directory: PlanningToolFrontend
     - run: npm run build --if-present
       working-directory: PlanningToolFrontend
-    - run: npm test -- --project=PlanningToolFrontend --watch=false
+    - run: npm test --no-sandbox, --disable-gpu --watch=false --browsers=ChromeHeadless
       working-directory: PlanningToolFrontend
