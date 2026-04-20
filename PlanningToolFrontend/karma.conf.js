@@ -43,6 +43,7 @@ module.exports = function (config) {
         base: 'ChromeHeadless',
         flags: [
           '--no-sandbox',
+          '--headless',
           '--disable-gpu',
           '--disable-dev-shm-usage',
           '--remote-debugging-port=9222'
