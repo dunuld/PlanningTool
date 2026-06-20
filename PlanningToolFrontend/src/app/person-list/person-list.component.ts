@@ -3,13 +3,13 @@ import { Person } from '../model/person';
 import { PersonService } from '../service/person.service';
 
 @Component({
-  selector: 'app-person-list',
-  templateUrl: './person-list.component.html',
-  styleUrls: ['./person-list.component.css']
+    selector: 'app-person-list',
+    templateUrl: './person-list.component.html',
+    styleUrls: ['./person-list.component.css'],
+    standalone: true
 })
 export class PersonListComponent implements OnInit {
-
-  persons: Person[];
+  persons: Person[] = [];
 
   constructor(private personService: PersonService) {
   }
